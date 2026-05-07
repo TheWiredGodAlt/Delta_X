@@ -1,9 +1,9 @@
-<div aligin="center">
+<div align="center">
   
   ## ***The Delta_X Project is Cool as Fuck***
 </div>
 
-<div aligin="center">
+<div align="center">
   
   Isca da raiva
   
