@@ -1,6 +1,9 @@
 <div align="center">
+ 💻
   
- 💻 ## ***The Delta_X Project is Cool as Fuck*** 👾
+ ## ***The Delta_X Project is Cool as Fuck*** 
+ 
+ 👾
 </div>
 
 <div align="center">
