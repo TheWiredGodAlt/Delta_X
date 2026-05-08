@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://b6vfhbxigjauo"]
+
+[ext_resource type="Texture2D" uid="uid://bbfb5o3yxrk4e" path="res://assets/bg/bg1.png" id="1_bkp1e"]
+[ext_resource type="Texture2D" uid="uid://b6kkc3s353fxx" path="res://assets/bg/bg2.png" id="2_y0upk"]
+
+[node name="Background" type="Node2D" unique_id=1429240756]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1687760311]
+position = Vector2(575, 327)
+texture = ExtResource("1_bkp1e")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1474960568]
+position = Vector2(575, 327)
+texture = ExtResource("2_y0upk")
