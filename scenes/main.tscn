@@ -1,11 +1,14 @@
 [gd_scene format=3 uid="uid://co5c7r0wwh5il"]
 
 [ext_resource type="PackedScene" uid="uid://dr2h8l15v6rsy" path="res://scenes/player.tscn" id="1_sugp2"]
+[ext_resource type="Script" uid="uid://djki1jh0jdi7d" path="res://scenes/scripts/main.gd" id="1_tbgi4"]
 [ext_resource type="PackedScene" uid="uid://b6vfhbxigjauo" path="res://scenes/background.tscn" id="2_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://bn5exsjpafbef" path="res://scenes/enemy_manager.tscn" id="3_tbgi4"]
 [ext_resource type="PackedScene" uid="uid://7ckxfns4bbi7" path="res://scenes/ui.tscn" id="4_jyhfs"]
+[ext_resource type="Script" uid="uid://ciue31xl8g2it" path="res://scenes/scripts/background.gd" id="4_tefeu"]
 
 [node name="Main" type="Node2D" unique_id=49827474]
+script = ExtResource("1_tbgi4")
 
 [node name="Player" parent="." unique_id=1573831275 instance=ExtResource("1_sugp2")]
 top_level = true
@@ -16,6 +19,7 @@ scale = Vector2(1.92, 1.92)
 [node name="Background" parent="." unique_id=1429240756 instance=ExtResource("2_jyhfs")]
 show_behind_parent = true
 position = Vector2(38, 8)
+script = ExtResource("4_tefeu")
 
 [node name="EnemyManager" parent="." unique_id=1615149731 instance=ExtResource("3_tbgi4")]
 position = Vector2(131, 90)

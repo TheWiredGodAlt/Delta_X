@@ -5,10 +5,10 @@
 
 [node name="Background" type="Node2D" unique_id=1429240756]
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1687760311]
+[node name="bg1" type="Sprite2D" parent="." unique_id=1687760311]
 position = Vector2(575, 327)
 texture = ExtResource("1_bkp1e")
 
-[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1474960568]
+[node name="bg2" type="Sprite2D" parent="." unique_id=1474960568]
 position = Vector2(575, 327)
 texture = ExtResource("2_y0upk")
