@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://bn5exsjpafbef" path="res://scenes/enemy_manager.tscn" id="3_tbgi4"]
 [ext_resource type="PackedScene" uid="uid://7ckxfns4bbi7" path="res://scenes/ui.tscn" id="4_jyhfs"]
 [ext_resource type="Script" uid="uid://ciue31xl8g2it" path="res://scenes/scripts/background.gd" id="4_tefeu"]
+[ext_resource type="Script" uid="uid://dnk6y2y5pc3d7" path="res://scenes/scripts/enemy_manager.gd" id="6_o6xl0"]
+[ext_resource type="Script" uid="uid://d4jn1os2ue4c2" path="res://scenes/scripts/ui.gd" id="8_tipki"]
 
 [node name="Main" type="Node2D" unique_id=49827474]
 script = ExtResource("1_tbgi4")
@@ -23,5 +25,7 @@ script = ExtResource("4_tefeu")
 
 [node name="EnemyManager" parent="." unique_id=1615149731 instance=ExtResource("3_tbgi4")]
 position = Vector2(131, 90)
+script = ExtResource("6_o6xl0")
 
 [node name="UI" parent="." unique_id=1872283140 instance=ExtResource("4_jyhfs")]
+script = ExtResource("8_tipki")

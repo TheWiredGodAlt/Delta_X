@@ -2,6 +2,8 @@
 
 [ext_resource type="Script" uid="uid://bvxq46hucr8cc" path="res://scenes/scripts/player.gd" id="1_g2els"]
 [ext_resource type="Texture2D" uid="uid://ci858weq2186c" path="res://assets/ship/nave1.png" id="2_qhqgy"]
+[ext_resource type="Script" uid="uid://clqsoqyjlvst2" path="res://scenes/scripts/bullet.gd" id="3_dqkch"]
+[ext_resource type="Texture2D" uid="uid://bbydtin0h03eg" path="res://assets/lasers/New Piskel(4).png" id="3_qhqgy"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g2els"]
 atlas = ExtResource("2_qhqgy")
@@ -144,6 +146,9 @@ animations = [{
 radius = 7.05
 height = 30.1
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dqkch"]
+size = Vector2(2, 10)
+
 [node name="Player" type="Area2D" unique_id=249086131]
 script = ExtResource("1_g2els")
 
@@ -163,5 +168,17 @@ shape = SubResource("CapsuleShape2D_g2els")
 position = Vector2(0, -12)
 
 [node name="FireTimer" type="Timer" parent="." unique_id=925753487]
+
+[node name="Bullet" type="Area2D" parent="." unique_id=1908014476]
+script = ExtResource("3_dqkch")
+
+[node name="Sprite2D" type="Sprite2D" parent="Bullet" unique_id=983644096]
+position = Vector2(9.536743e-07, -9.999998)
+scale = Vector2(0.15625, 0.3125)
+texture = ExtResource("3_qhqgy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bullet" unique_id=983997186]
+position = Vector2(0, -10)
+shape = SubResource("RectangleShape2D_dqkch")
 
 [connection signal="timeout" from="FireTimer" to="." method="_on_fire_timer_timeout"]

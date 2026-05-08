@@ -1,7 +1,36 @@
 [gd_scene format=3 uid="uid://bn5exsjpafbef"]
 
+[ext_resource type="Script" uid="uid://dobtpk0fyj7ry" path="res://scenes/scripts/area_2d.gd" id="1_i6mmg"]
+[ext_resource type="Texture2D" uid="uid://c6tibudk88u1c" path="res://assets/enemies/New Piskel(3).png" id="1_sqyd6"]
+[ext_resource type="Script" uid="uid://hvpry0yc6rk7" path="res://scenes/scripts/enemy_bullet.gd" id="3_aojfi"]
+[ext_resource type="Texture2D" uid="uid://bbydtin0h03eg" path="res://assets/lasers/New Piskel(4).png" id="3_m8so1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aojfi"]
+size = Vector2(12, 30)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i6mmg"]
+size = Vector2(30, 30)
+
 [node name="EnemyManager" type="Node2D" unique_id=1615149731]
 
 [node name="SpawnTimer" type="Timer" parent="." unique_id=542572185]
 
 [node name="DificultTimer" type="Timer" parent="." unique_id=1464942138]
+
+[node name="Enemy_Bullet" type="Area2D" parent="." unique_id=1417741312]
+script = ExtResource("3_aojfi")
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemy_Bullet" unique_id=1039890866]
+texture = ExtResource("3_m8so1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy_Bullet" unique_id=1379052365]
+shape = SubResource("RectangleShape2D_aojfi")
+
+[node name="Enemy" type="Area2D" parent="." unique_id=1963806341]
+script = ExtResource("1_i6mmg")
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemy" unique_id=461945415]
+texture = ExtResource("1_sqyd6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy" unique_id=616594154]
+shape = SubResource("RectangleShape2D_i6mmg")
